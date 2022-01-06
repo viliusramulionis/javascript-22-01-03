@@ -1,0 +1,15 @@
+.image {
+    width: 150px;
+}
+
+.table {
+    width: 100%;
+}
+
+.table td {
+    width: 33.333333333%;
+}
+
+.table td img {
+    width: 100%;
+}

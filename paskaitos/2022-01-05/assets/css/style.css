@@ -1,7 +1,10 @@
 /* CSS - Cascading stylesheets */
 
+/* */
+/* @import url(); */ 
+
 form {
-    background-color: rgb(211, 35, 35);
+    background-color: #d32323;
 }
 
 .formBackground {
@@ -18,4 +21,9 @@ form {
 
 #bg {
     background-color: blue;
+}
+
+.img {
+    border: 10px solid #d32323;
+    width: 300px;
 }
