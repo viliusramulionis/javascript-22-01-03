@@ -1,0 +1,76 @@
+/* Oswald Font */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+/* OpenSans Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3, 
+h4, 
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif, 
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+#header .navbar {
+    background: rgba(30, 30, 30, 0.45);
+    padding: 8px 0;
+}
+
+#header .logo {
+    float: left;
+    padding-top: 20px;
+}
+
+#header .navigation {
+    float: right;
+}
+
+#header .navigation > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#header .navigation > ul > li > a {
+    display: block;
+    padding: 0 15px;
+    font-weight: 700;
+    color: #FFF;
+    line-height: 60px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#header .navigation > ul > li > a:hover {
+    color: rgb(162, 0, 255);
+}
