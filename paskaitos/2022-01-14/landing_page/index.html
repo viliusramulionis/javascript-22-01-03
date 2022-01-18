@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bit Landing Page Building</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -18,7 +19,7 @@
                 </div>
                 <nav class="navigation">
                     <ul>
-                        <li><a href="#intro">Home</a></li>
+                        <li><a href="#intro" class="active">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#works">Works</a></li>
@@ -33,19 +34,49 @@
     </header>
     <section id="intro">
         <div class="container">
-            <div class="intro-left">
-                <div class="intro-text">
-                    <h2>Hi, we're ultra modern landing</h2>
-                    <h3>We'll change your idea of design</h3>
-                    <p>Pellentesque sapien purus, sagittis eu accumsan convallis, vehicula ut lectus. Fusce accumsan purus pretium ligula vehicula, interdum nisl vulputate. Vivamus ultrices luctus quam eu feugiat</p>
+            <div class="row clearfix">
+                <div class="intro-left">
+                    <div class="intro-text">
+                        <h2>Hi, we're ultra modern landing</h2>
+                        <h3>We'll change your idea of design</h3>
+                        <p>Pellentesque sapien purus, sagittis eu accumsan convallis, vehicula ut lectus. Fusce accumsan purus pretium ligula vehicula, interdum nisl vulputate. Vivamus ultrices luctus quam eu feugiat</p>
+                    </div>
+                    <div class="intro-buttons">
+                        <a href="#" class="button grey-button">Discover More</a>
+                        <a href="#" class="button grey-button">Purchase Now</a>
+                    </div>
                 </div>
-                <div class="intro-buttons">
-                    <a href="#" class="button grey-button">Discover More</a>
-                    <a href="#" class="button grey-button">Purchase Now</a>
+                <div class="intro-right">
+                    <img src="assets/img/tablet.png" alt="Tablet" />
                 </div>
             </div>
-            <div class="intro-right">
-                <img src="assets/img/tablet.png" alt="Tablet" />
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <div class="section-heading">
+                <h3>About Us</h3>
+                <h2><span>Who we are</span></h2>
+            </div>
+            <div class="row clearfix">
+                <div class="about-left">
+                    <div class="tabs">
+                        <ul>
+                            <li class="active"><a href="#">Our Philosophy</a></li>
+                            <li><a href="#">Our History</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <p><i class="fab fa-accessible-icon"></i> Pellentesque sapien purus, sagittis eu accumsan convallis, vehicula ut lectus. Fusce accumsan purus pretium ligula vehicula, ut interdum nisl vulputate. Vivamus ultrices luctus quam eu feugiat. Nunc sagittis odio eget odio laoreet mollis. Nullam rutrum blandit convallis. Maecenas id nisi eget nunc convallis consectetur nec sed nibh. Mauris in gravida</p>
+                            <p>Pellentesque sapien purus, sagittis eu accumsan convallis, vehicula ut lectus. Fusce accumsan purus pretium ligula vehicula Sed justo sapien, ultrices non rutrum in, condimentum non sem. Aliquam finibus condimentum tellus, vel viverra est gravida ut. Duis vestibulum lorem et eros fermentum tristique penatibus et magnis dis parturient montes</p>
+                            <div class="tab-buttons">
+                                <a href="#" class="button">Discover More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <img src="assets/img/about-image.jpg" />
+                </div>
             </div>
         </div>
     </section>
