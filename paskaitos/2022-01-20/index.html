@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .relative {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+            width: 500px;
+            margin: auto;
+        }
+
+        .position_fixedtl {
+            top: 0;
+            left: 0;
+        }
+
+        .position_tl {
+            position: absolute;
+        }
+
+        .position_tr {
+            position: absolute;
+            right: 0;
+        }
+
+        .position_bl {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .position_br {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            top: unset;
+            left: unset;
+        }
+
+        .block {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="relative">
+
+        <div class="block position_tl position_fixedtl position_br"></div>
+        <div class="block position_tr"></div>
+        <div class="block position_bl"></div>
+        <div class="block position_br"></div>
+        
+    </div>
+</body>
+</html>
