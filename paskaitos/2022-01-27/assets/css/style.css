@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;700;900&display=swap');
+
+body {
+    background-color: #f4e2e3;
+    /* background-image: url('../img/design.png');
+    background-repeat: no-repeat;
+    background-position: 50.5% 50%; */
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 768px;
+    margin: 70px auto 0;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 10px 15px 20px 0 rgb(0,0,0,.4);
+    height: 480px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.form-container .left,
+.form-container .right {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 40px 50px;
+    text-align: center;
+}
+
+.form-container .right {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    background: rgb(255,70,76);
+    background: linear-gradient(90deg, rgba(255,70,76,1) 0%, 
+    rgba(246,84,120,1) 100%);
+}
+
+.form-container .right p,
+.form-container .right h2 {
+    color: #fff;
+    width: 100%;
+}
+
+.form-container .right p {
+    font-weight: 100;
+}
+
+.form-container h2 {
+    font-size: 37px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.form-container .socials {
+    margin: 49px 0;
+}
+
+.form-container .socials > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form-container .socials > ul > li > a {
+    display: block;
+    font-size: 25px;
+    color: #333;
+    border: 1px solid #e5e5e5;
+    border-radius: 100%;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background-color: #fff;
+    transition: all .2s ease-in-out;
+}
+
+.form-container .socials > ul > li > a:hover {
+    background-color: #ff4b2b;
+    border-color: #d13013;
+    color: #fff;
+}
+
+.form-container .form-label {
+    font-size: 14px;
+    font-weight: 100;
+    margin-bottom: 7px;
+}
+
+.form-container input.input {
+    border: none;
+    width: 100%;
+    background-color: #eee;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.form-container .forgot-password {
+    margin-top: 6px;
+}
+
+.form-container .forgot-password a {
+    text-decoration: none;
+    color: #333;
+}
+
+.form-container .forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.form-container .submit {
+    margin-top: 15px;
+}
+
+.form-container .submit .button {
+    background-color: #ff4b2b;
+    border: none;
+    color: #fff;
+    width: 140px;
+    line-height: 38px;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background .5s ease-in-out;
+    cursor: pointer;
+}
+
+.form-container .submit .button:hover {
+    background-color: #731100;
+}
