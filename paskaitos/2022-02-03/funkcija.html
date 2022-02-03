@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //global scope
+        let global = 'Test'
+
+        //function scope prasideda
+        function testineFunkcija(argumentas) {
+            //console.log(global)
+            let x = 10
+            //console.log(x * argumentas)
+            if(argumentas > 12)
+                return 'Rezultatas negalimas'
+
+            return x * argumentas
+        }
+
+        //Griztama i global scope
+        let test = testineFunkcija(8)
+        console.log(test)
+
+        console.log(testineFunkcija(25))
+
+        //Block scope
+        if(global == 'Test') {
+            let y = 10
+            var z = 10;
+        }
+
+        //console.log(z)
+
+    </script>
+</body>
+</html>

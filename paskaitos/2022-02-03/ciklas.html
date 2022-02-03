@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciklas</title>
+</head>
+<body>
+
+    <script>
+        function randomSkaicius(min, max) { 
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+
+        //Ciklas - Algoritmas kuris kartoja ta pati veiksma, kol pasiekamas norimas rezultatas
+        //While ciklas
+        let kiekis = 0
+
+        while(kiekis < 10) {
+            console.log('While Ciklas veikia')
+            kiekis++
+        }
+
+        const raides = 'ABCDEFGH'
+
+        //For ciklas
+        for(let i = 0; i < raides.length; i++) {
+
+            if(i == 2) {
+                console.log('Ivyko veiksmas')
+            }
+
+            //break; //Break komanda nutraukia cikla
+            console.log(raides.charAt(i))
+        }
+
+        //Atsitiktines raides paemimas
+
+        let raide = raides.charAt( randomSkaicius(0, raides.length) ) 
+
+        console.log('Atsitiktine raide:' + raide)
+        
+        // //Raidziu skaiciavimas
+
+        // console.log('Raidziu skaiciavimas')
+
+        // let checker = 0
+
+        // for(let i = 0; i < 100; i++) {
+        //     let position = randomSkaicius(0, raides.length)
+
+        //     console.log(raides.charAt(position))
+        // }
+        
+    </script>
+</body>
+</html>
