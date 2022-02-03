@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kintamieji</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let x = false //boolean reiksmes true arba false
+        let y = '' //string
+        let o = 10 //number
+        let z = function() {} //function
+        let w = [] //array
+        let q = {} //object
+
+        console.log(typeof w)
+    
+        if(x) {
+            console.log('X yra teigiamas')
+        } 
+
+        let skaicius = 10
+        
+        if(typeof skaicius == 'number')
+            console.log('Kintamasis yra skaicius')
+            
+        //Sudetis su operatoriumi
+        skaicius += 15
+        console.log(skaicius)
+        
+        //Atimtis su operatoriumi
+        skaicius -= 15
+        console.log(skaicius)
+
+        //Daugyba su operatoriumi
+        skaicius *= 2
+        console.log(skaicius)
+
+        //Dalyba su operatoriumi
+        skaicius /= 5
+        console.log(skaicius)
+
+        //skaicius = skaicius + 1
+        skaicius++
+        //skaicius = skaicius - 1
+        skaicius--
+
+        console.log(skaicius) // Rezultatas 4
+        
+        if(skaicius === 15)
+            console.log('Skaicius yra lygus keturiems')
+
+        //skaicius = 8 % skaicius;
+        skaicius %= 8;
+        console.log('Modulis: ' + skaicius) 
+
+
+        skaicius = 'Tekstas'
+            console.log(skaicius)
+        
+        
+    </script>
+</body>
+</html>
