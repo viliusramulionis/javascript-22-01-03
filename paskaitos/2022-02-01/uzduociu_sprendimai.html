@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzduociu sprendimai</title>
+</head>
+<body>
+    <script>
+        //Ketvirta uzduotis
+        function randomSkaicius(min, max) { 
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+
+        var x = randomSkaicius(0 , 25)
+        var y = randomSkaicius(0 , 25)
+        var z = randomSkaicius(0 , 25)
+
+        var vidurinis = Math.max(
+            Math.min( x, y),
+            Math.min( Math.max(x, y), z)
+        )
+        console.log(Math.min( Math.max(x, y), z))
+        console.log(vidurinis)
+    </script>
+</body>
+</html>
