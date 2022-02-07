@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="pirma_uzduotis"></div>
+    <script>
+        let rezultatas = '' //Sukurtas tuscias kintamasis rezultatui talpinti
+
+        for(let i = 1; i <= 400; i++) { //Sukuriame cikla kuris suktusi 400 kartu
+            rezultatas += '*' //Naujos zvaigzdutes pridejimas kiekvieno ciklo eigoje
+
+            if(i % 50 == 0) //Sutikriname ar dabartine pozicija yra 
+                rezultatas += '<br />'
+        }
+
+        //Kintamojo isvedimas i narsykle
+        document.getElementById('pirma_uzduotis').innerHTML = rezultatas
+    </script>
+    <div id="antra_uzduotis"></div>
+    <script>
+        function randomSkaicius(min, max) { 
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        
+        rezultatas = ''
+        let skaiciuotuvas = 0;
+
+        for(let i = 0; i < 300; i++) {
+            let skaicius = randomSkaicius(0, 300)
+            
+            if(skaicius > 150)
+                skaiciuotuvas++
+
+            if(skaicius > 275) 
+                rezultatas += `<span style="color: red">${skaicius}</span> `
+            else
+                rezultatas += skaicius + ' '
+            
+        }
+
+        rezultatas += `<h3>Skaiciu didesniu nei 150 yra: ${skaiciuotuvas}</h3>`
+
+        document.getElementById('antra_uzduotis').innerHTML = rezultatas
+    </script>
+
+    <div id="trecia_uzduotis"></div>
+    
+    <script>
+        rezultatas = ''
+        let daliklis = 77
+
+        for(let i = 1; i <= 3000; i++) {
+            let gautasSkaicius = i / daliklis
+            
+            //if(i % daliklis == 0)
+            if(Number.isInteger(gautasSkaicius)) {
+
+                if(i != daliklis)
+                    rezultatas += ', '
+
+                rezultatas += i
+
+            }
+        }
+
+        document.getElementById('trecia_uzduotis').innerHTML = rezultatas
+    </script>
+
+    <div id="ketvirta_uzduotis" style="line-height: 8px;"></div>
+
+    <script>
+        rezultatas = ''
+        let dydis = 25
+
+        for(let i = 1; i <= (dydis * dydis); i++) {
+            rezultatas += '*'
+
+            if(i % dydis === 0) 
+                rezultatas += '<br />'
+        }
+
+        document.getElementById('ketvirta_uzduotis').innerHTML = rezultatas
+    </script>
+
+    <div id="penkta_uzduotis"></div>
+
+    <script>
+        rezultatas = ''
+        let benas = 0
+        let jovita = 0
+
+        while(true) {
+            let benas_score = randomSkaicius(10, 20)
+            let jovita_score = randomSkaicius(5, 25)
+
+            if(benas_score == 12 || jovita_score == 12) {
+                rezultatas += 'Partija negaliojanti<br />'
+                continue; //Praleidzia viena ciklo rata ir nebeskaito kodo einancio zemiau uz komandos
+            }
+
+            benas += benas_score
+            jovita += jovita_score
+
+            if(benas_score > jovita_score)
+                rezultatas += 'Partiją laimėjo: Benas <br />'
+            
+            if(jovita_score > benas_score)
+                rezultatas += 'Partiją laimėjo: Jovita <br />'
+
+            if(jovita_score == benas_score)
+                rezultatas += 'Įvyko lygiosios <br />'
+
+            if(benas >= 222 || jovita >= 222) {
+
+                if(benas > jovita) 
+                    rezultatas += `Žaidimą laimėjo: Benas, surinkęs: ${benas} taškus <br />`
+                else {
+                    rezultatas += `Žaidimą laimėjo: Jovita, surinkusi: ${jovita} taškus <br />`
+                }
+
+                break; //Nutraukia cikla pilnai
+            }
+        }
+
+        document.getElementById('penkta_uzduotis').innerHTML = rezultatas
+    </script>
+
+    <div id="sesta_uzduotis"></div>
+
+    <style>
+        #sesta_uzduotis {
+            background: black;
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+
+        #sesta_uzduotis h3 {
+            padding-top: 600px
+        }
+
+        #sesta_uzduotis .block {
+            width: 5px;
+            height: 5px;
+            background: red;
+            position: absolute;
+        }
+    </style>
+    
+    <script>
+        rezultatas = ''
+        let block_count = 0;
+
+        for(var i = 0; i < 300; i++) {
+
+            let top = randomSkaicius(0, 550)
+            let left = randomSkaicius(0, 550)
+
+            if(top > 495 || left > 495)
+                block_count++
+
+            rezultatas += `<div class="block" style="top: ${top}px; left: ${left}px"></div>`
+
+        }
+
+        rezultatas += `<h3>Iš kraštinių išlendančių blokelių suma yra: ${block_count}</h3>`
+
+        document.getElementById('sesta_uzduotis').innerHTML = rezultatas
+    </script>
+</body>
+</html>
