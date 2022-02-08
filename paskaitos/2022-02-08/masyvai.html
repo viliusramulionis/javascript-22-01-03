@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masyvai</title>
+</head>
+<body>
+    <script>
+        //Masyvas = Array
+        //Objektas = Object
+        let x = [15, 'Stringas', 30, '12']
+
+        x['test'] = 10 //Tekstinio indekso priskyrimas
+
+        //Visu reiksmiu paemimas naudojant for cikla
+        for(let i = 0; i < x.length; i++) {
+            console.log(x[i])
+        }
+
+        //Length paskaiciavimo neatitikimai
+        let y = []
+        y[0] = ''
+        y[10] = 'Test'
+        y[15] = 'Test2'
+        console.log(y)
+
+        let z = ['unshift', 20, 50, 15, 20, 16, 'push']
+        
+        //push() visa laika deda nauja reiksme i masyvo pabaiga
+        z.push('Test')
+        //unshift() metodas deda nauja reiksme i masyvo prieki
+        z.unshift('Priekyje')
+
+        //shift() pasalina pacia pirma reiksme is masyvo
+        z.shift()
+        //pop() pasalina paskutine reiksme is masyvo
+        z.pop()
+
+        console.log(z)
+
+        //Generuojame masyva kurio ilgis 50 elementu
+        let masyvas = []
+
+        for(let i = 0; i < 50; i++) {
+            masyvas[i] = i
+        }
+
+        //Atsispausdiname suformuota masyva
+        console.log(masyvas)
+
+        //Paimame duomenis for cikle is masyvo cikle
+        //Pakeisti keikviena reiksme masyve, supliusuojant kiekviena einamaja su pries tai buvusia
+        for(let i = 0; i < masyvas.length; i++ ) {
+            // i = 49, masyvas.length = 49
+            if(i != masyvas.length - 1)
+                masyvas[i] += masyvas[i+1]
+        }
+        
+        //Duomenu apdorojimas cikle naudojant forEach metoda
+        //Modernus funkcijos aprasymas
+        masyvas.forEach( (reiksme, indeksas) => {
+            masyvas[indeksas] = 12
+            console.log(reiksme + ' Indeksas: ' + indeksas)
+        } )
+
+        console.log(masyvas)
+
+        //Klasikinis funkcijos callback aprasymas
+        // masyvas.forEach( function(reiksme, indeksas) {
+        //     console.log(reiksme)
+        // } )
+
+    </script>
+</body>
+</html>
