@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--
+    ['AAA', 'ABC', 'AAA']
+
+    //Po viena nesikartojanciu: 1
+    //Unikali kombinacija: 2
+    -->
+
+    <script>
+        function randomSkaicius(min, max) { 
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+
+        console.log('____PIRMA UZDUOTIS____')
+
+        //Masyvo kurimas naudojant ES6 Objekta
+        //let masyvas = new Array()
+        let masyvas = []
+        
+        // Pirmas variantas raidei paimti
+        // let simboliai = 'ABCD'
+        // console.log(simboliai.charAt(2))
+
+        // Antras variantas raidei paimti
+        let simboliai = ['A', 'B', 'C', 'D']
+
+        //console.log(simboliai[randomSkaicius(0, simboliai.length - 1)])
+
+        for(let i = 0; i < 200; i++) {
+            const skaicius = randomSkaicius(0, simboliai.length - 1)
+            const simbolis = simboliai[skaicius]
+        
+            masyvas.push(simbolis)
+        }
+
+        //console.log(masyvas)
+
+        console.log('____ANTRA UZDUOTIS____')
+
+        masyvas.sort()
+
+        //console.log(masyvas)
+
+        console.log('____TRECIA UZDUOTIS____')
+
+        function masyvoGeneravimas() {
+            let masyvas = []
+            let simboliai = ['A', 'B', 'C', 'D']
+
+            for(let i = 0; i < 200; i++) {
+                const skaicius = randomSkaicius(0, simboliai.length - 1)
+                const simbolis = simboliai[skaicius]
+            
+                masyvas.push(simbolis)
+            }
+
+            return masyvas
+        }
+
+        let pirmas_masyvas = masyvoGeneravimas()
+        let antras_masyvas = masyvoGeneravimas()
+        let trecias_masyvas = masyvoGeneravimas()
+        let kombinuotas_masyvas = []
+        let skaiciuotuvas = 0;
+
+        pirmas_masyvas.forEach((reiksme, indeksas) => {
+            //Keli variantai kaip deti reiksmes i masyva
+            //kombinuotas_masyvas[indeksas]
+            if(pirmas_masyvas[indeksas] != antras_masyvas[indeksas]
+                && antras_masyvas[indeksas] != trecias_masyvas[indeksas]
+                && trecias_masyvas[indeksas] != pirmas_masyvas[indeksas])
+                skaiciuotuvas++
+
+            kombinuotas_masyvas.push (
+                 reiksme + antras_masyvas[indeksas] + trecias_masyvas[indeksas]
+            )
+
+            //kombinuotas_masyvas[indeksas] = reiksme + antras_masyvas[indeksas] + trecias_masyvas[indeksas]
+        })
+        
+        // console.log(kombinuotas_masyvas)
+        // console.log(skaiciuotuvas)
+
+        let unique = kombinuotas_masyvas.filter((val, key, array) => {
+            return array.indexOf(val) === key
+        }) 
+
+        console.log(kombinuotas_masyvas.length)
+        console.log(unique.length)
+
+        let x = [10, 15, 10, 15]
+
+        console.log(x.indexOf(15))
+
+        console.log('____KETVIRTA UZDUOTIS_____')
+
+        const generateUniqueArray = () => {
+
+            let masyvas = []
+
+            while(true) {
+                let skaicius = randomSkaicius(100, 999)
+                
+                if(!masyvas.includes(skaicius))
+                    masyvas.push(skaicius)
+
+                if(masyvas.length >= 100)
+                    return masyvas
+            }
+
+            return false
+        }
+
+        pirmas_masyvas = generateUniqueArray()
+        antras_masyvas = generateUniqueArray()
+
+        console.log('____PENKTA UZDUOTIS_____')
+
+        masyvas = []
+
+        for(let i = 0; i < pirmas_masyvas.length; i++) {
+
+            if(!antras_masyvas.includes(pirmas_masyvas[i]))
+                masyvas.push(pirmas_masyvas[i])
+
+        }
+
+        console.log(masyvas)
+
+        console.log('____SESTA UZDUOTIS_____')
+        
+        masyvas = []
+
+        for(let i = 0; i < pirmas_masyvas.length; i++) {
+
+            if(antras_masyvas.includes(pirmas_masyvas[i]))
+                masyvas.push(pirmas_masyvas[i])
+
+        }
+
+        console.log(masyvas)
+
+    </script>
+
+</body>
+</html>
